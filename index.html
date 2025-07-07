@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyLight Token (CYLN)</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #020617;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #030b1e;
+      border-bottom: 1px solid #1e293b;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 64px;
+      width: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #22c55eaa;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0;
+      user-select: none;
+      text-shadow: 0 0 10px #22c55e;
+    }
+
+    .container {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .token-info {
+      margin-top: 1rem;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 12px 28px;
+      background: linear-gradient(90deg, #22c55e, #16a34a);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 12px #22c55e88;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #16a34a, #22c55e);
+      box-shadow: 0 0 20px #22c55ecc;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+
+    .logo-price-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo-price-container img {
+      width: 180px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #22c55eaa;
+      background: #030b1e;
+      padding: 8px;
+    }
+
+    .price-box {
+      background: #0ea5e9;
+      padding: 20px 32px;
+      border-radius: 15px;
+      box-shadow: 0 0 18px #0ea5e9cc;
+      color: white;
+      font-weight: 800;
+      font-size: 1.5rem;
+      min-width: 180px;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .price-box small {
+      font-weight: 400;
+      font-size: 1rem;
+      margin-top: 6px;
+      color: #cce6ff;
+    }
+
+    .socials a {
+      margin-right: 1rem;
+      color: #94a3b8;
+    }
+
+    .qr {
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .logo-price-container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .logo-price-container img,
+      .price-box {
+        width: 90vw !important;
+        max-width: 300px;
+        margin: 0 auto;
+        height: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="MyLight Logo" />
+    <h1>MyLight Token (CYLN)</h1>
+  </header>
+
+  <div class="container">
+    <p>
+      MyLight (CYLN) güçlü ve güvenli bir BEP-20 tokenıdır. Işığını yansıtan topluluğa sahip çıkmak için tasarlandı.
+    </p>
+
+    <div class="token-info">
+      <strong>Token Adı:</strong> MyLight<br />
+      <strong>Sembol:</strong> CYLN<br />
+      <strong>Toplam Arz:</strong> 100,000,000,000<br />
+      <strong>Vergi:</strong> %5 (%2 cüzdan, %3 kontrat)<br />
+      <strong>Kontrat Adresi:</strong>
+      <a href="https://bscscan.com/token/0x5cEC85Eb0E30ffb3B9C8d85E48678143e525ed3F" target="_blank"
+        >0x5cEC85Eb0E30ffb3B9C8d85E48678143e525ed3F</a>
+    </div>
+
+    <button onclick="addCYLN()">CYLN Token'ı Cüzdanıma Ekle</button>
+
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x5cEC85Eb0E30ffb3B9C8d85E48678143e525ed3F" target="_blank">
+      <button>CYLN Satın Al (PancakeSwap)</button>
+    </a>
+
+    <div class="qr">
+      <p>Mobil kullanıcılar için QR kod:</p>
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?data=0x5cEC85Eb0E30ffb3B9C8d85E48678143e525ed3F&size=150x150"
+        alt="CYLN QR"
+      />
+    </div>
+
+    <section class="logo-price-container">
+      <img src="assets/logo.png" alt="MyLight Logo" />
+      <div class="price-box">
+        <div id="priceValue">₺--</div>
+        <small>CANLI Fiyat (PancakeSwap)</small>
+      </div>
+    </section>
+
+    <section>
+      <h2>Yol Haritası</h2>
+      <ul>
+        <li>✅ Q2 2025 – Token Geliştirme ve Yayın</li>
+        <li>🚀 Q3 2025 – Pazarlama & Listelemeler</li>
+        <li>📱 Q4 2025 – Mobil Cüzdan Entegrasyonu</li>
+        <li>🌐 2026 – Launchpad & DeFi Platformu</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Token Dağılımı</h2>
+      <p>Token dağılımı: %95 kullanıcılar, %2 cüzdan, %3 kontrat.</p>
+    </section>
+
+    <section>
+      <h2>Sosyal Medya</h2>
+      <div class="socials">
+        <a href="#" target="_blank">Telegram (yakında)</a>
+        <a href="#" target="_blank">Twitter (yakında)</a>
+        <a href="mailto:info@mylight.io">hasanmarmara35@gmail.com</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Whitepaper</h2>
+      <a href="assets/MyLight-Lightpaper.pdf" target="_blank">📄 Whitepaper'ı Görüntüle</a>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script>
+    async function addCYLN() {
+      if (window.ethereum) {
+        try {
+          await window.ethereum.request({
+            method: "wallet_watchAsset",
+            params: {
+              type: "ERC20",
+              options: {
+                address: "0x5cEC85Eb0E30ffb3B9C8d85E48678143e525ed3F",
+                symbol: "CYLN",
+                decimals: 18,
+                image: window.location.origin + "/assets/logo.png",
+              },
+            },
+          });
+        } catch (error) {
+          console.error("Token eklenemedi:", error);
+        }
+      } else {
+        alert("MetaMask yüklü değil veya tarayıcı cüzdanı tanınmadı.");
+      }
+    }
+
+    const BSC_RPC = "https://bsc-dataseed.binance.org/";
+    const web3 = new Web3(BSC_RPC);
+
+    const PANCAKE_ROUTER_ADDRESS = "0x10ED43C718714eb63d5aA57B78B54704E256024E";
+    const PANCAKE_ROUTER_ABI = [
+      {
+        name: "getAmountsOut",
+        type: "function",
+        inputs: [
+          { type: "uint256", name: "amountIn" },
+          { type: "address[]" , name: "path" }
+        ],
+        outputs: [
+          { type: "uint256[]", name: "amounts" }
+        ],
+        constant: true,
+        payable: false,
+        stateMutability: "view"
+      }
+    ];
+
+    const TOKEN_ADDRESS = "0x5cEC85Eb0E30ffb3B9C8d85E48678143e525ed3F";
+    const BNB_ADDRESS   = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"; // WBNB
+    const BUSD_ADDRESS  = "0xe9e7cea3dedca5984780bafc599bd69add087d56";
+
+    const router = new web3.eth.Contract(PANCAKE_ROUTER_ABI, PANCAKE_ROUTER_ADDRESS);
+    const amountIn = web3.utils.toBN("1000000000000000000");
+
+    async function fetchDexPrice() {
+      const priceEl = document.getElementById("priceValue");
+      try {
+        const amountsOut = await router.methods.getAmountsOut(amountIn, [TOKEN_ADDRESS, BNB_ADDRESS, BUSD_ADDRESS]).call();
+        const busdAmount = web3.utils.fromWei(amountsOut[2]);
+        priceEl.textContent = `≈ $${parseFloat(busdAmount).toFixed(4)}`;
+      } catch (error) {
+        console.error("Fiyat alınamadı:", error);
+        priceEl.textContent = "Fiyat alınamadı (likidite olmayabilir)";
+      }
+    }
+
+    fetchDexPrice();
+    setInterval(fetchDexPrice, 60000);
+  </script>
+</body>
+</html>
